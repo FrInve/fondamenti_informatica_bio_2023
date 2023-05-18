@@ -1,3 +1,15 @@
+/*
+ * Joseph e Jane partecipano a una gara per scimpanzè.
+ * Durante il processo, devono comunicare frequentemente tra di loro.
+ * Dato che non sono esattamente umani, non sanno parlare benissimo.
+ * Devono mandarsi dei messaggi usando dei bigliettini di piccole dimensioni.
+ * Per risparmiare spazio sui bigliettini, usano un algoritmo di compressione delle stringhe.
+ *      Se un carattere c si ripete per n>1 volte, esso sarà
+ *      rappresentato da cn, dove n è il numero di volte che si ripete.
+ *      Se il carattere c occorre una sola volta, esso sarà rappresentato da c.
+ * Aiutate Joseph e Jane a comunicare nella gara (tramite un programma con funzioni ricorsive);
+ * https://www.hackerrank.com/challenges/string-compression
+ */
 #include <stdio.h>
 #include <string.h>
 

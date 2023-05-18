@@ -1,15 +1,20 @@
+/*
+ * Scrivere un programma che, tramite ricorsione, 
+ * stampi il triangolo di Tartaglia
+ * https://it.wikipedia.org/wiki/Triangolo_di_Tartaglia
+ */
 #include <stdio.h>
 
 // Recursive function to generate Pascal's triangle
-int pascalTriangle(int row, int col) {
+int tartagliaTriangle(int row, int col) {
     if (col == 0 || col == row)
         return 1;
     else
-        return pascalTriangle(row - 1, col - 1) + pascalTriangle(row - 1, col);
+        return tartagliaTriangle(row - 1, col - 1) + pascalTriangle(row - 1, col);
 }
 
 // Function to print Pascal's triangle
-void printPascalTriangle(int n) {
+void printTartagliaTriangle(int n) {
     for (int i = 0; i < n; i++) {
         for (int j = 0; j <= i; j++) {
             printf("%d ", pascalTriangle(i, j));
@@ -22,7 +27,7 @@ int main() {
     int numRows = 5;
 
     printf("Pascal's Triangle:\n");
-    printPascalTriangle(numRows);
+    printTartagliaTriangle(numRows);
 
     return 0;
 }

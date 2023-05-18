@@ -26,32 +26,32 @@ void merge(int *array, int left, int center, int right){
     int j = center+1;
     int k = 0;
     int tmp[right-left+1];
-    print_array(array,6);
+    //print_array(array,6);
 
-    while(i <= center && j<=right){
-        if(array[i] <= array[j]){
+    while(i <= center && j<=right){ // Sono ancora da riordinare?
+        if(array[i] <= array[j]){   // Sono in ordine
             tmp[k] = array[i];
             i++;
-        }else{
+        }else{                      // Sono in disordine
             tmp[k] = array[j];
             j++;
         }
         k++;
     }
 
-    while(i<=center){
-        tmp[k] = array[i];
+    while(i<=center){               // Copio i valori disordinati rimasti
+        tmp[k] = array[i];          // all'inizio
         i++;
         k++;
     }   
 
-    while(j<=right){
-        tmp[k] = array[j];
+    while(j<=right){                // Copio i valori disordinati rimasti
+        tmp[k] = array[j];          // Alla fine
         j++;
         k++;
     }
-    print_array(tmp,right-left+1);
-    for(k=left; k<=right;k++){
+    //print_array(tmp,right-left+1);
+    for(k=left; k<=right;k++){      // Copio quello che ho riordinato nel mio array
         array[k] = tmp[k-left];
     }
 }
