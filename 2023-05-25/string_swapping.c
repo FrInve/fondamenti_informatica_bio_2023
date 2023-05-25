@@ -1,3 +1,11 @@
+/*
+ * Data una stringa di lunghezza pari, scrivere una funzione ricorsiva 'scambia'
+ * che scambi i caratteri nelle posizioni pari con i rispettivi successivi nelle
+ * posizioni dispari.
+ * Per esempio:
+ * scambia("cane") -> "acen"
+ * scambia("az") -> "za"
+ */
 #include <string.h>
 #include <stdio.h>
 
@@ -14,7 +22,7 @@ void scambia(char* stringa){
 }
 
 int main(){
-    char stringa[10] = "cane";
+    char stringa[10] = "az";
     printf("%s\n",stringa);
     scambia(stringa);
     printf("%s\n",stringa);
