@@ -10,14 +10,14 @@ int tartagliaTriangle(int row, int col) {
     if (col == 0 || col == row)
         return 1;
     else
-        return tartagliaTriangle(row - 1, col - 1) + pascalTriangle(row - 1, col);
+        return tartagliaTriangle(row - 1, col - 1) + tartagliaTriangle(row - 1, col);
 }
 
 // Function to print Pascal's triangle
 void printTartagliaTriangle(int n) {
     for (int i = 0; i < n; i++) {
         for (int j = 0; j <= i; j++) {
-            printf("%d ", pascalTriangle(i, j));
+            printf("%d ", tartagliaTriangle(i, j));
         }
         printf("\n");
     }
